@@ -1,0 +1,18 @@
+https://hub.docker.com/r/linuxserver/pyload
+
+
+---------------------------code---------------------------
+
+docker run -d \
+  --name=pyload \
+  -e PUID=1000 \
+  -e PGID=1000 \
+  -e TZ=Europe/London \
+  -p 8000:8000 \
+  -p 7227:7227 `#optional` \
+  -v $PWD/config:/config \
+  -v $PWD/downloads:/downloads \
+  --restart unless-stopped \
+  lscr.io/linuxserver/pyload
+
+---------------------------code---------------------------

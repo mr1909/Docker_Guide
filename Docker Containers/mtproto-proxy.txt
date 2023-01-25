@@ -1,0 +1,34 @@
+mtproto-proxy:
+
+Help: 
+https://hub.docker.com/r/seriyps/mtproto-proxy
+
+--------------------------------------code---------------------------------------------------
+
+curl -L -o mtp_install.sh https://git.io/fj5ru && bash mtp_install.sh
+
+Use default proxy port 443? [y/n] n
+
+Enter port number: 1-32000: 9000
+
+Use randomly generated secret 'db8eb22fc237e367d71f0be974f7af03'? [y/n] y
+
+
+Use empty @MTProxybot AD TAG? Answer 'n' to set AD TAG [y/n] y
+
+
+Enable dd-only mode? (recommended) [y/n] y
+
+
+Enable TLS-only mode? (recommended) [y/n] y
+
+
+Use 's3.amazonaws.com' as domain name for fake-tls? Answer 'n' to change to another [y/n] y
+
+--------------------------------------code---------------------------------------------------
+
+
+docker:
+
+
+docker run -d --network=host seriyps/mtproto-proxy -p 9000 -s d0d6e111bada5511fcce9584deadbeef -t dcbe8f1493fa4cd9ab300891c0b5b326

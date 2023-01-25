@@ -1,0 +1,9 @@
+docker file browser:
+
+https://hub.docker.com/r/filebrowser/filebrowser
+
+---------------------------code---------------------------
+
+docker run -d --name=Filebrowser --hostname=filebrowser --restart=always -p 8086:80 -v /var/www/html/dl:/srv -e TZ="Europe/Madrid" filebrowser/filebrowser:latest
+
+---------------------------code---------------------------

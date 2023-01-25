@@ -1,0 +1,6 @@
+
+---------------------------code---------------------------
+
+docker run -d -p 8086:8081 -v $PWD/dl:/downloads --restart unless-stopped alexta69/metube
+
+---------------------------code---------------------------

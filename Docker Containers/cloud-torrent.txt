@@ -1,0 +1,10 @@
+docker cloud-torrent:
+
+https://hub.docker.com/r/boypt/cloud-torrent
+
+
+---------------------------code---------------------------
+
+docker run -d --restart unless-stopped -p 19990:3000 -v $PWD/downloads:/downloads -v $PWD/downloads:/torrents boypt/cloud-torrent
+
+---------------------------code---------------------------
