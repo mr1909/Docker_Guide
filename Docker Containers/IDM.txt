@@ -8,7 +8,7 @@ docker run -d \
   -e PUID=1000 \
   -e PGID=1000 \
   -e TZ=Europe/London \
-  -p 8000:8000 \
+  -p 8087:8000 \
   -p 7227:7227 `#optional` \
   -v $PWD/config:/config \
   -v $PWD/downloads:/downloads \
