@@ -1,0 +1,19 @@
+install qBittorrent:
+
+https://hub.docker.com/r/wernight/qbittorrent
+
+
+---------------------------code---------------------------
+
+
+mkdir -p config torrents downloads
+
+docker run -d --user $UID:$GID \
+	-p 8087:8080 -p 6881:6881/tcp -p 6881:6881/udp \
+	-v $PWD/dl/config:/config \
+	-v $PWD/dl/torrents:/torrents \
+	-v $PWD/dl/downloads:/downloads \
+	wernight/qbittorrent
+
+
+---------------------------code---------------------------
