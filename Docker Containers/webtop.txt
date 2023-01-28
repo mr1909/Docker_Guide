@@ -1,0 +1,24 @@
+linuxserver webtop:
+
+https://hub.docker.com/r/linuxserver/webtop
+
+--------------------------------------code---------------------------------------------------
+
+
+docker run -d \
+  --name=webtop1 \
+  --security-opt seccomp=unconfined `#optional` \
+  -e PUID=1000 \
+  -e PGID=1000 \
+  -e TZ=Europe/London \
+  -e SUBFOLDER=/ `#optional` \
+  -e KEYBOARD=en-us-qwerty `#optional` \
+  -e TITLE=Webtop `#optional` \
+  -p 8000:3000 \
+  -v /path/to/data:/config \
+  --device /dev/dri:/dev/dri `#optional` \
+  --shm-size="1gb" `#optional` \
+  --restart unless-stopped \
+  lscr.io/linuxserver/webtop:latest
+
+  --------------------------------------code---------------------------------------------------

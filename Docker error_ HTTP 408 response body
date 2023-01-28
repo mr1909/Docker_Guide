@@ -1,0 +1,9 @@
+sudo ip link set dev eth0 mtu 1400
+
+
+docker login
+
+
+
+user: mr1909
+pass: x124578X!

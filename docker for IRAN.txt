@@ -1,0 +1,19 @@
+docker for IRAN:
+
+
+nano /etc/apt/apt.conf
+
+--add next line:
+Acquire::http::Proxy "http://Proxy.Docker.ir:5555"; 
+
+
+nano /etc/docker/daemon.json
+
+--add next line:
+{
+    "registry-mirrors": ["https://registry.docker.ir"]
+}
+
+
+systemctl daemon-reload
+systemctl restart docker

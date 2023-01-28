@@ -1,11 +1,34 @@
+docker container list:
 
+docker ps
 
+-------------------------------------
 
+Remove a container:
+docker rm /redis
 
+Force-remove a running container:
+docker rm --force redis
 
+-------------------------------------
 
+Remove All Docker:
 
+docker rmi $(docker images -q)
 
+-------------------------------------
+
+docker Remove all stopped containers:
+
+docker rm $(docker ps --filter status=exited -q)
+
+-------------------------------------
+
+Stop All Docker Containers:
+
+docker kill $(docker ps -q)
+
+-------------------------------------
 
 
 
