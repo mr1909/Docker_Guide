@@ -1,0 +1,11 @@
+Bypass apt-get error when using proxy:
+
+sudo apt-get -o Acquire::http::proxy=false <update/install> 
+
+
+
+
+
+--add following to end of apt-get:
+
+-o Acquire::http::proxy=false
