@@ -1,5 +1,6 @@
 docker run -d \
-    --name=putty \
+    --name=putty1 \
+    --restart=always \
     -p 8089:5800 \
     -v /docker/appdata/putty:/config:rw \
     jlesage/putty
