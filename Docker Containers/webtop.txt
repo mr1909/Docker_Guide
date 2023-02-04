@@ -14,7 +14,7 @@ docker run -d \
   -e SUBFOLDER=/ `#optional` \
   -e KEYBOARD=en-us-qwerty `#optional` \
   -e TITLE=Webtop `#optional` \
-  -p 8000:3000 \
+  -p 8086:3000 \
   -v /path/to/data:/config \
   --device /dev/dri:/dev/dri `#optional` \
   --shm-size="1gb" `#optional` \
