@@ -1,0 +1,30 @@
+Install Docker Desktop on Windows:
+
+download "Docker Desktop Installer"
+
+https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe
+
+then install and reboot.
+
+go to control panel > program and features > enable >> "windows sandbox" // "virtual machine platform"
+
+then reboot.
+
+then downlaod "Windows Subsystem for Linux Update" aka "wsl_update_x64":
+
+https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
+
+then reboot.
+
+open docker Desktop.
+
+Done!
+
+
+
+
+
+
+
+
+
