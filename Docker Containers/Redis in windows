@@ -1,0 +1,35 @@
+install Redis in windows:
+
+install docker windows then after login to docker hub, go to cmd and type:
+docker pull redis
+
+then
+
+Create a dedicated Docker network:
+docker network create -d bridge redisnet
+
+then
+
+Run Redis container:
+docker run -d -p 6379:6379 --name myredis --network redisnet redis
+
+
+----------------------------------------------------------------------
+
+for testing using python:
+
+import redis
+
+# create a Redis client
+r = redis.Redis(host='localhost', port=6379, db=0)
+
+# set a key-value pair in Redis
+r.set('mykey', 'Hello, Redis!')
+
+# get the value of a key in Redis
+value = r.get('mykey')
+
+# print the value
+print(value.decode('utf-8'))
+
+----------------------------------------------------------------------
